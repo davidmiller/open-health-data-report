@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Supporting users of Open Health Data</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+      body {
+      padding-top:70px;
+      }
+
+      #masthead {
+      min-height:170px;
+      background-color: #f06060;
+      padding: 56px 0px;
+      color:white;
+      }
+
+      .icon-bar {
+      background-color:#fff;
+      }
+
+      /* hide sidebar sub menus by default */
+      #sidebar.nav .nav {
+      display: none;
+      font-size:12px;
+      }
+
+      /* show sub menu when parent is active */
+      #sidebar.nav>.active>ul {
+	display: block;
+        }
+
+        .navbar-bright {
+	background-color: white;
+        color:#fff;
+        border-bottom: 4px solid  #f06060;
+        }
+
+        .navbar-bright a, #masthead a, #masthead .lead {
+  	color:#aaaacc;
+        }
+
+        .navbar-bright li > a:hover {
+        background-color:#000033;
+        }
+
+        .affix-top,.affix{
+	position: static;
+        }
+
+        #sidebar a {
+        color: black;
+        }
+
+        @media (min-width: 979px) {
+        #sidebar.affix-top {
+        position: static;
+  	margin-top:30px;
+  	width:228px;
+        }
+
+        #sidebar.affix {
+        position: fixed;
+        top:70px;
+        width:228px;
+        }
+        }
+
+        #sidebar li.active {
+  	border:0 #f06060 solid;
+  	border-right-width:4px;
+        }
+
+        #sidebar ul li.active {
+        border-right-color: firebrick;
+        }
+
+        body {
+        font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2{
+        font-family: Merriweather, Serif;
+        }
+
+        h2 {
+        background-color: #f06060;
+        color: white;
+        padding: 24px;
+        }
+        h4 { font-weight: bold; font-size: 22px;}
+        h2 a {
+        color: white;
+        }
+        h2 a:hover {
+        color: white;
+        }
+        p, ol, ul {
+        font-size: 18px;
+        line-height: 26px;
+        }
+        p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        }
+        .interview h4 {
+        font-weight: bold;
+        }
+        #sidebar .nav li a {
+        padding: 2px 15px;
+        }
+
+
+</style>
+
+</head>
+<body>
+  <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="http://openhealthcare.org.uk/assets/images/toplogo.png" />
+      </div>
+
+    </div>
+  </header>
+
+  <div id="masthead">
+    <div class="container">
+      <div class="row">
+        <h1>
+          Supporting users of Open Health Data
+        </h1>
+      </div>
+    </div><!-- /cont -->
+  </div>  <!-- Masthead -->
+
+  <!-- Begin Body -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h5>
+          <a href="https://twitter.com/puntofisso" target="_blank">
+            Giuseppe Sollazzo
+          </a>
+        </h5>
+        <h5>
+          <a href="https://twitter.com/thatdavidmiller" target="_blank">
+            David Miller
+          </a>
+        </h5>
+        <h5>
+          Published January 2017
+        </h5>
+
+          <h2 id="executive-summary">
+            Executive Summary
+            <a class="pull-right" href="#executive-summary">
+              &para;
+            </a>
+          </h2>
+
+          <p>
+            NHS England have commissioned Open Health Care to gather evidence from the community of health Open Data users to help understand the needs of people using data outside NHS England. This report is intended to provide clear recommendations and evidence of user need to inform NHS England's Open Data policy and programme development.
+          </p>
+          <p>
+            This report, written by Giuseppe Sollazzo in collaboration with David Miller of Open Health Care, outlines what we have learned from users of health Open Data in the health sector and beyond.
+          </p>
+          <p>
+
+            Following our interviews, discussions and subsequent analysis, we present two specific recommendations, as well as some general principles for data publishing with concrete examples.
+          </p>
+          <h3>Recommendation 1</h3>
+          <p>
+            Establish a single authoritative online point of access for all datasets in the health sector, and proceed with a programme of reducing duplication in data publishing. This should include both direct access to Open Data, and a clear process to access Shared Data.
+          </p>
+          <h3>
+            Recommendation 2
+          </h3>
+          <p>
+            Establish an expert and reachable data support team with a remit covering the entire health system, not limited to individual institutions. This team should be encouraged to build strong links with the wider data ecosystem and lead a health data user group.
+          </p>
+          <p>
+            We discuss these recommendations and their rationale in further detail below.
+          </p>
+          <!-- END EXECUTIVE SUMMARY -->
+
+          <h2 id="introduction">
+            Introduction
+            <a class="pull-right" href="#introduction">
+              &para;
+            </a>
+          </h2>
+          <p>
+            The phrase “Open Data” has been part of the transparency activists’ vocabulary for over ten years, and Governments around the world have been seen to engage enthusiastically with the Open Data policy agenda. The Open Government Partnership has demanded and agreed clear commitments on Open Data by participating countries and embedded them into their National Action Plans.
+          </p>
+          <p>
+            In the United Kingdom, Government Departments and agencies now routinely publish Open Data and often issue press releases to advertise their achievements. The Government Data Portal data.gov.uk has lived through several phases, and is showing renewed interest while undergoing a user research review.
+          </p>
+          <p>
+            NHS England have been heavily involved with the Open Data agenda in the health system, both releasing data and collaborating with other health agencies in order to support their data programmes. The UK health sector has seen increasing numbers of data releases from the likes of Public Health England, the Care Quality Commission, NHS Digital (formerly the Health and Social Care Information Centre), and other Department of Health arm’s-length bodies (ALB). These programmes and collaborations were also encouraged between 2012 and 2015 by the Health and Social Care Transparency Panel, an advisory board of the Department of Health chaired by the then undersecretary of State Dr Dan Poulter MP.
+          </p>
+          <p>
+            More recently, NHS England launched the NHS England Data Catalogue an online data portal containing open datasets routinely used by NHS England.
+          </p>
+          <!-- END INTRODUCTION -->
+
+          <h2 id="approach">
+            Approach
+            <a class="pull-right" href="#approach">
+              &para;
+            </a>
+          </h2>
+          <p>
+
+            We contacted a wide network of professionals working with health data including developers, general practitioners, academics, researchers, entrepreneurs, private sector company leaders, and government officials. We spoke with over 20 people, and conducted 11 formal structured interviews. Summaries of these interviews are included in this report. The remaining contacts provided ideas, introductions, or useful information via e-mail.
+          </p>
+          <p>
+            The people we interviewed belong to roughly four areas
+          </p>
+          <ul>
+            <li>
+              Users who use data for research purposes, to experiment for academic or professional development reasons
+            </li>
+            <li>
+              Users from businesses who offer data related products or services
+            </li>
+            <li>
+              Users who create evidence to support their line of business
+            </li>
+            <li>
+              Users who are medical professionals and use data to audit their activity
+            </li>
+          </ul>
+          <p>
+            All participants were asked to respond to three wide-ranging questions:
+          </p>
+          <ol>
+            <li>
+              What do you/your colleagues use health open data for? (or: are you aware of interesting uses of health open data?)
+            </li>
+            <li>
+              Do you find any issues in the data regarding quality, access, process, or any other problem?
+            </li>
+            <li>
+              Do you have any recommendations for the data publishers?
+            </li>
+          </ol>
+          <p>
+            These questions were used to kickstart the conversations. Although we took notes, these are not included in the report, where we include a structured, but narrative summary of the findings.
+          </p>
+          <p>
+            There are multiple definitions of “Open Data”, some of which are relatively strict. The Open Definition by the Open Knowledge Foundation is for example very specific and subject to versioning. The extended version mandates that a licence to be deemed “open” needs to grant a given set of required permissions (use, redistribution, modification, separation, compilation, non-discrimination, propagation, application to any purpose, and no charge); there are however certain acceptable conditions (attribution, integrity, share-alike, notice, source, technical restriction prohibition, and non-aggression), that an open licence can subject the contents to. The definition is summarised as follows on the official website:
+          </p>
+          <blockquote>
+            Open Data and content can be <strong>freely used, modified and shared</strong> by <strong>anyone</strong> for
+            <strong>any purpose.</strong>
+          </blockquote>
+          <p>
+            The goal of this report is to describe interesting uses of data that is available and that is not attached to restrictive terms and conditions; however, we have not restricted or verified the licensing of the data uses we describe in this report, some of which might not comply with the Open Definition or other strictly worded licences. This is to keep an open mind about alternative licenses, and potentially encourage the adoption of standard licenses wherever the data is not already released under an open data licence, and the data release itself does not appear to be cause for controversy.
+          </p>
+          <p>
+            In addition to the one-to-one e-mails and interviews, a general survey was launched via Twitter and disseminated through several data and health practitioners’ social networks. The survey asked roughly the same three questions. Despite a large number of shares on social media, the survey only collected few responses. We factored these into the general analysis.
+          </p>
+          <!-- END APPROACH -->
+
+          <h2 id="interviews">
+            Interviews
+            <a class="pull-right" href="#interviews">
+              &para;
+            </a>
+          </h2>
+
+          <p>
+            In this section, we give a brief summary of each interview, following a generic structure: biographical notes on the interviewee, main datasets they mentioned, example of data uses, issues reported, and recommendations that emerged from the conversation. In some instances we discussed general issues regarding health Open Data, due to the nature of the interviewee’s work, and we report a summary that does not follow the general structured scheme.
+          </p>
+
+          <section class="interview" id="anna-powell-smith">
+            <h3>
+              Anna Powell-Smith <br/>
+              <small>Academic Software Developer at EBM Data Lab</small>
+            </h3>
+            <blockquote>
+              We use Prescribing Data to produce datasets for researchers
+            </blockquote>
+            <p>
+              At the time of the interview, Anna Powell-Smith was tech lead at the Evidence Based Medicine (EBM) Data Lab at the University of Oxford. The lab is led by Ben Goldacre. EBM Data Lab
+              <em>build working, useful products to help academics and doctors. [They] campaign for better data in healthcare.</em>
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              Anna lists a number of datasets which contribute to this:
+              <ul>
+                <li>Practice List Size and GP Count for each practice, from the NHS Business Services Authority</li>
+                <li>Clinical Commissioning Group boundaries, from the NHS England Resources website (and previously from the ONS Open Geography Portal)</li>
+                <li>GP Practice Dispensing Status (now vanished and replaced by the Dispensing Practice Name and address, from NHS Prescription Services)</li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              The lab has recently focussed on drug prescribing and clinical trials data. They aggregate the prescribing data from NHS Digital into an openly accessible database called OpenPrescribing, which in turn they use to drive their research, building tools for GPs and medicines managers. Most of the outcomes of their work are bespoke datasets exports, and data analysis tools which are used within the health system.
+            </p>
+            <p>
+              Their product is derived data, which has enabled interesting reuses of it. The OpenPrescribing dataset is especially popular with researchers. Several academic publications have appeared that use this database. For example, this article published in the journal Rheumatology.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Anna reports several issues encountered in their work:
+              <ul>
+                <li>
+                  The data from BSA data is attached to an Open Government Licence, but is weirdly protected by a captcha/login
+                </li>
+                <li>
+                  The practice list size data from BSA has different granularity from the prescribing data, which makes it difficult to link different datasets
+                </li>
+                <li>
+                  Weightings per disease are not released by BSA
+                </li>
+                <li>
+                  Often there isn’t a single place where to look for dataThere are often multiple sources for health related data, and all apparently canonical
+                </li>
+                <li>
+                  Slices of data are not under OGL
+                </li>
+                <li>
+                  BSA access is split between NHS and not-NHS users, because of privacy issues; however, there are 1.2 million people working in the NHS, so this seems to be not a serious issue (or one that could be dealt with in a better way).
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Anna made some specific suggestions:
+              <ul>
+                <li>
+                  Different formats for different datasets; big datasets should be released for example using BigQuery exports rather than CSV or XLS files
+                </li>
+                <li>
+                  There is a need for support and engagement on the NHS side; this should be similar to what happens in the ONS, where each dataset is connected to a named officer who can support and advice; an SLA to answer question (48 hours). NHS Digital are generally good at this, while BSA take 28 days to respond: a single unit could help.
+                </li>
+                <li>
+                  Lists like GP surgeries and CCG boundaries should be managed “as if they were registers”, with a clear accountability chain
+                </li>
+                <li>
+                  Consistent codes need to be used across datasets and cross-checked
+                </li>
+                <li>
+                  Public pages with good SEO where the datasets are published, not behind captchas like the BSA data
+                </li>
+                <li>
+                  Do not restrict dataset access to internal NHS users without good reason (a load of BSA data is only available to NHS IPs)
+                </li>
+                <li>
+                  Decent README and documentation with dataset
+                </li>
+                <li>
+                  Use standard open licences
+                </li>
+                <li>
+                  Someone at NHS Digital whose full-time job it is to help people navigate datasets, and who can help the organization fixing issues found in the datasets.
+                </li>
+            </p>
+          </section> <!-- Anna -->
+
+          <hr />
+
+          <section class="interview" id="callum-tanner">
+            <h3>
+              Callum Tanner <br/>
+              <small>Public Health Analyst at Isle of Wight Council</small>
+            </h3>
+            <blockquote>
+              Health Open Data helped me conduct the Isle of Wight Joint Strategic Needs Assessment
+            </blockquote>
+            <p>
+              Callum Tanner is a Data Analyst for the Isle of Wight Council, where the local authority is responsible for all of the Public Health initiatives. Similarly to other Local Authorities, the Isle of Wight has started using data analysis units as a way to inform their operations. In March 2015 the Isle of Wight was selected as one of the first 29 Vanguard sites in Britain which released an additional £200 million worth of NHS England funding to integrate home care, mental health and community nursing, GP services and hospitals for the first time since 1948. Callum produces data analyses for an integrated health and social care system on the Isle of Wight.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              Callum lists a series of datasets used in several projects:
+              <ul>
+                <li>
+                  Health Impact of Physical Inactivity (HIPI) Tool from the South West Public Health Observatory
+                </li>
+                <li>
+                  Active People Survey from Sports England
+                </li>
+                <li>
+                  National Child Measurement Programme from Fingertips/HSCIC
+                </li>
+                <li>
+                  Breastfeeding Statistics for initiation and 6-8 weeks from Data.Gov.UK
+                </li>
+                <li>
+                  Health Visitor Data from NHS England and the National Child and Maternal Health Intelligence Network (PHE)
+                </li>
+                <li>
+                  NHS Dental Practices from digital.nhs.uk
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              Callum used a variety of datasets to conduct the Isle of Wight Joint Strategic Needs Assessment (JSNA). The results of this JSNA are published.
+            </p>
+            <p>
+              For example, the Physical Activity aspects of the JSNA were conducted using the Health Impact of Physical Inactivity (HIPI) Tool, released by the South West Public Health Observatory and the Active People Survey from Sports England.
+            </p>
+            <p>
+              A very important part of the JSNA was the Obesity assessment, for which the National Child Measurement Programme Data was used at both Ward and Local Authority level. This was accessed through the Fingertips Tool and the HSCIC Website.
+            </p>
+            <p>
+              OpenPrescribing data was used it to see how many IUD coils had been provided in the area.
+            </p>
+            <p>
+              A more simple use that comes to mind is a list of NHS dental practices from digital.nhs.uk. This was used by Callum to create a combo box limited to values from a lookup table in an Access database. <em>"We have a lot of examples of small uses of health data like this one"</em>, says Callum.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Callum reports situations in which the licensing is not clear and a lot of confusion as to where the data should be officially: ” Callum also suggests aggregate datasets from sources like OpenPrescribing are a powerful tool because of information governance issues:
+            </p>
+            <blockquote>
+              <p>
+                Health Visitor data is a commissioned service by Public Health England. It is now updated on the CHIMAT website but it is reported that PHE are moving all content to the gov.uk domain. Maybe this has happened already but the data is updated on CHIMAT at this moment in time. All of this data will form part of the Maternity Children's Data Set (MCDS) but this is still in its infancy and the current processes could continue up until 2017/18 which is probably to allow time to improve data standards across all the datasets of MCDS. Trying to get my head around where all the information is has been quite frustrating.
+              </p>
+              <p>
+                Given some of the perceived and real IG barriers across NHS, GP's and the Council which can sometimes be a hindrance, regularly updated intermediate websites like openprescribing.net, or fingertips can be extremely useful.
+              </p>
+              <p>
+                For our commissioned services it is easier to access rich record level datasets as we have data sharing processes and agreements in place in order to monitor KPI's, but for services which are not directly managed by Public Health, open data is often our best source of information.
+              </p>
+            </blockquote>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Two themes emerged from our conversation with Callum: first of all,  a strong desire to see a single point of access for all the UK health data; secondly, that every dataset should have its licensing clearly marked.
+            </p>
+          </section> <!-- Callum -->
+
+          <hr />
+
+          <section class="interview" id="edafe-onerhime">
+            <h3>
+              Edafe Onerhime <br/>
+              <small>Open Data Services Coop</small>
+            </h3>
+            <blockquote>
+              We use Open Data to Connect people who are building innovative health services
+            </blockquote>
+            <p>
+              Edafe Onerhime is a data expert with a Masters in Business Intelligence. During her studies she tried to answer the question “How good is health open data?”. She subsequently worked on freelance data related projects and runs data dives, events, data literacy workshops, and data for good events through ACT Collective (a collaborative practice focused on the charity sector). She is an ODI registered trainer and currently works with Open Data Services, a digital co-operative, working on projects for social good.
+            </p>
+            <p>
+              Although Edafe doesn’t directly make use of health open data, she has worked through Open Data Services on a number of grant-based projects. In this respect, Edafe insists that the most interesting aspect is the release of Contracting Data in the Health Sector using the Open Contracting Data Standard, which is being widely adopted by the civil service at large.
+            </p>
+            <p>
+              The major goal in this would be the ability to “follow the money” through standards and Open Data and offer health services and public authorities the opportunity to Analyse grants given to and from hospitals, keep accurate accounts of human services (e.g. volunteers numbers and skills, etc), and acquire the ability to link contracts to grants, and grants to human services.
+            </p>
+            <p>
+              Edafe is excited to develop a discussion around canonical registers.
+            </p>
+            <p>
+              However, Edafe is also adamant that her work increasingly suggests that for the data to be useful, it should be first of all used by health professionals; this however requires bi-directional workflows and data capability building.
+            </p>
+            <p>
+            As far as Open Data Services are concerned, there are several areas of interest in health Open Datasets to be released. Edafe provided an overview of the types of datasets required based on projects she has been working on.
+            </p>
+            <p>
+              Open Contracting is an initiative advocating the adoption of open standards and data releases in all phases of Government procurement. In this respect, there are several areas of interest for data releases, for example:
+            </p>
+            <ul>
+              <li>
+                Hospital and other health construction and infrastructure
+              </li>
+              <li>
+                Property Management especially private finance initiative (PFI)
+              </li>
+              <li>
+                Other public–private partnerships (PPPs)
+              </li>
+              <li>
+                NHS Procurement including medication
+              </li>
+              <li>
+                NHS Budget & Spend
+              </li>
+            </ul>
+            <p>
+              360Giving is a project that supports organisations to publish their grants data in an open, standardised way and helps people to understand and use the data in order to support decision-making and learning across the charitable giving sector. Regarding health data, the project would benefit from data about grants to and from NHS organisations, and details of beneficiaries.
+            </p>
+            <blockquote>
+              I know that there is a grants agreement for voluntary organisations but I cannot easily pinpoint beneficiaries.
+            </blockquote>
+            <p>
+              A similar initiative, Open Referral, aims to develop standards and platforms to share community resources information, where data such as human services in health care and volunteering would be highly beneficial.
+            </p>
+            <p>
+              The Joined up Data Alliance is a project run by Omidyar Network that supports sustainable development by sharing data about organisations.  Some pressing issues they find are:
+            </p>
+            <ul>
+              <li>
+                How can an NHS organisation be identified?
+              </li>
+              <li>
+                There are multiple places to find a hospital or other organisation.
+              </li>
+              <li>
+                There is no official registrar to focus on defining the entities and keeping the data up-to-date.
+              </li>
+          </section> <!-- Edafe -->
+
+          <hr />
+
+          <section class="interview" id="gavin-jamie">
+            <h3>
+              Gavin Jamie <br/>
+              <small>General Practitioner</small>
+            </h3>
+            <blockquote>
+              I use QOF data to compare prevalence between my patients and other areas of the country, and to release aggregate
+              calculations for the constituents countries of the United Kingdom
+            </blockquote>
+            <p>
+              Gavin Jamie is a General Practitioner. His practice is in Swindon and he also holds a MSc in Healthcare Informatics with the University of Bath. Gavin also runs a service that aggregates Quality and Outcomes Framework (QOF) data, where data going back to 2005 can be found under a Creative Commons Licence, presented in several formats including CSV and Access DB, the latter proving particularly popular with other GPs.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              Gavin uses a variety of sources both for his General Practice activities and his QOF aggregation service:
+            </p>
+            <ul>
+              <li>
+                Own statistical data from his GP Practice
+              </li>
+              <li>
+                QOF from NHS Digital
+              </li>
+              <li>
+                Prescription data from NHS Digital
+              </li>
+            </ul>
+            <p>
+              It should be noted that Gavin is a long time data user. He has been collating and re-sharing QOF data on his website since 2004, before the age of Open Data.
+              <em>"I used to do 200 FOI requests a year to get data from PCTs"</em>, Gavin recalls. He notices how things have changed for the better:
+              <em>"Once I was even contacted a month ahead of publication and asked which formats would be best for me"</em>, Gavin adds.
+            </p>
+
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              The most important way Gavin uses this data is for auditing his practice. <em>&ldquo;We ask questions&rdquo;</em>, he says, “such as: ‘Are we missing cases of certain conditions?’ or ‘Are we prescribing very differently from other surgeries?’”. Gavin describes a number of population health studies done using data. For example, he analysed data on blood pressure at his GP surgery in Swindon, which has a total of about 10,000 patients. Of which, about 1,000  suffer from high blood pressure, which is near the national average.
+            </p>
+            <p>
+              However,  Swindon is demographically different from rest of Wiltshire, with a considerably higher migrant population and fewer people living in rural areas. By using QOF, Gavin was able to verify that the most similar prevalence for high blood pressure were in Milton Keynes and Bristol, raising interesting questions around the management of public health campaigns.
+            </p>
+            <p>
+              On another instance, they found out they had higher prescription rates of an antibiotic compared to the national average.
+            </p>
+            <blockquote>
+              We had an issue with a potential payment under a Local Enhanced Service - essentially a mini contract with incentives for hitting specific target. The target in question was about prescribing certain types of antibiotics, based on a national target. The denominator is all prescriptions for antibiotics and my practice has tended to be above average on that ratio. We were able to use OpenPrescribing data to show that we actually prescribed fewer of these antibiotics than almost every other practice in Swindon. The problem was that we did not prescribe enough other antibiotics in the denominator to bring down the ratio. The CCG paid out.
+            </blockquote>
+
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Gavin presented a number of issues for the datasets he uses, most of which are due to the level of aggregation. He complains that at the granularity the data is made open, it is often difficult to interpret.
+            </p>
+            <p>
+              QOF gives totals for conditions/prescriptions, without the ability to link. For example: if a patient has been given an antibiotic and a flu jab, they will appear under two totals. There is no way to see which patients received both. This seems to be a recurrent problem, another example of which is national diabetes data: at the current level of aggregation, it is definitely good for the press to create news about it, but not good enough to improve outcomes for patients, especially for a GP.
+            </p>
+            <p>
+              A more technical complaint is the lack of properly linked data; for example there is a lot of data about manpower in practices and payments to practices, but these are in different files, split between multiple files. Gavin suggests that it would be good for GPs to have access to tools that assist them with practical tasks related to analysing the data.
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              <blockquote>
+                I only have one recommendation: give us data we don’t have.
+              </blockquote>
+            </p>
+            <p>
+              An example is hospital admissions by GP practice. At the moment this is only available from the Hospital Episodes Statistics dataset (HES) which is incredibly hard to access for GPs. Gavin reports that such data was routinely accessed by GPs ten years ago, but that data governance has made this increasingly difficult.
+            </p>
+          </section> <!-- Gavin -->
+
+
+          <hr />
+
+          <section class="interview" id="jamie-whyte">
+            <h3>
+              Jamie Whyte <br/>
+              <small>Trafford Council Innovation and Intelligence Lab Manager</small>
+            </h3>
+            <blockquote>
+              We used Open Data to increase cervical cancer screening across the Borough
+            </blockquote>
+            <p>
+              Jamie Whyte works for the Trafford Council in Greater Manchester, where he set up an Innovation and Intelligence Lab with the help of the Release of Data Fund administered by the Open Data User Group and Cabinet Office. The Lab is a multi-disciplinary team of data specialists developing innovative ideas, often based on data, to reinvent Council-run services. As their website says:
+              <blockquote>
+                We use all sorts of data - open, closed, big and linked - and turn it into intelligence that is used to (re)design services, understand demand and inform citizens. At the same time we are testing and exploring new technologies to improve the way that we do things.
+              </blockquote>
+            </p>
+            <p>
+              Jamie is the Head of the Lab and a co-lead on Open Data for LocalGov Digital.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              <ul>
+                <li>
+                  Fingertips
+                </li>
+                <li>
+                  Local health profiles
+                </li>
+                <li>
+                  Prescribing data
+                </li>
+                <li>
+                  Non-open data from GP Practices
+                </li>
+                <li>
+                  North West Ambulance Response Data
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              Jamie reports that the aggregation level of Open Data is often an obstacle. There is a lot of data that could be released with an Open Licence at a lower level.
+            </p>
+            <blockquote>
+              <p>
+                We don't do a huge amount with health Open Data - partly because it mostly doesn't seem to go down to small area levels.
+              </p>
+              <p>
+                Small area data would be really useful in targeting local health campaigns. For example in Trafford, we have an issue with high rates of hospital admissions for unintentional and deliberate injuries of 0-4 year olds. If that data were open at small area level, it would be much easier to share with partners, and encourage third sector organisations to apply for money and design projects to help tackle the problem. This would allow us all to target interventions better. As it is, the data is held in databases that are not open (probably rightly so), but they could output data for the country showing this sorts of data at small area - e.g. MSOA / LSOA / Ward.
+              </p>
+            </blockquote>
+            <p>
+              Fingertips is used regularly to produce maps. An example is data about smoking, analysed using Fingertips to identify the location of smoking clinics. This data is useful because it gives data at a GP Practice level, which is useful to map events and show disparity within the borough. They also use local health profiles, which provide ward level data.
+            </p>
+            <p>
+              Prescribing data was used to look for mental health issues by analysing ratios of antidepressant prescriptions in order to inform social workers activities. In this instance the team really struggled to process the data, suggesting they would need a high performance computing platform in order to do this in a reasonable time.
+            </p>
+            <p>
+              Cervical cancer screening received some attention too, although this required putting together health data with non-health data - for instance population, demographics, languages. They used the data to identify areas with the lowest cervical cancer screening rates, and then profiled those areas in question using demographic data. To print leaflets, they used data about languages spoken, ethnicities religion, housing types, and housing providers.
+            </p>
+            <p>
+              Some closed data from GP Practices was also used, for example postcodes of women who were invited for cervical cancer screening, but didn't attend. They mapped these to give commissioners a group of streets to focus on, and they went into the community knowing what to expect. It was a successful project achieving a big increase in screening rates including women who had problems identified at the screening and treated, who would have not otherwise been screened using the previous approach.
+            </p>
+            <p>
+              A similar successful project managed to increase the number of defibrillators in the borough.  Using data to profile areas - demographics, cardiovascular disease rates, physical activity, and ambulance call-outs allowed the council to produce a priority list of areas to put defibrillators. Businesses were contacted from the Mayor’s Office to ask for donations to install a defibrillator close by. These engagement activities, raising awareness, together with other charities' work led to a massive increase in the availability of defibrillators.
+            </p>
+
+            <h4>
+              Issues
+            </h4>
+
+
+
+
+            <p>
+              Jamie reports difficulties around the licensing on Fingertips; it is not clearly stated, and as a consequence there is often little confidence that the data is open or what licensing is attached to it.
+            </p>
+            <p>
+              Each dataset seems to have separate usage rules. In one case they found a request to add disclaimer stating: “This material is Crown Copyright but may be reproduced without formal permission or charge for personal or in-house use and should be acknowledged as '©Crown Copyright, source: Public Health England 2015'.”
+            </p>
+            <p>
+              Local Health data has licensing issues.
+              <blockquote>
+                We can't tell whether it's open data, and it can be tricky to use this. An API
+                or similar would be lovely.
+              </blockquote>
+            </p>
+            <p>
+              Jamie sent us an example of two different levels of usability: “Look at these two websites. This looks like it's shaping up to be pretty good: https://www.nhs.uk/service-search/Performance/Search And this is horrible: https://indicators.hscic.gov.uk/webview/https://indicators.hscic.gov.uk/webview/”
+            </p>
+            <p>
+              One common complain about health open data is that it doesn’t go down enough to a small area level. Enabling operations for councils often requires street-level data, but having them on a council ward level would be good enough in most cases.
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Jamie offered several recommendations in three areas: first of all, clear and explicit licensing of each dataset, so that the local government officers can use the data with confidence; secondly, the ability to access data at a lower level of aggregation whenever possible; thirdly, a technical recommendation around data access via API, especially for data that changes often, or identifying codes that need to be verified. This could be useful in all those cases where identifier can be short-lived. For example, given the BNF code for a certain medicine, an API method could allow the user to verify whether that code is still valid, or if that drug is no longer being dispensed via the NHS; or a similar example could apply to the GP surgeries list: an API call would let the user know the status of a certain practice, relaying the fact that it is no longer operating. This kind of API would enable users to execute quick verifications of values in their applications.
+            </p>
+          </section> <!-- Jamie -->
+
+          <hr />
+
+          <section class="interview" id="judy-aldred">
+            <h3>
+              Judy Aldred <br/>
+              <small>CEO, SSentif</small>
+            </h3>
+            <blockquote>
+              We use data to power dashboards that give our clients insight on their operations
+            </blockquote>
+            <p>
+              Judy is the founder and CEO of SSentif, a company providing intelligence and data
+              analysis services to NHS organisations and Local Government. They offer an online benchmarking tool which provides over a million indicators, targets and alerts, visualizations, outlier detections, and other similar features. Their major clients are NHS Trusts, CCGs and Local Authorities.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              SSentif is powered by a variety of data sources. They are not limited to Open Data, but use any data they can access.
+            </p>
+            <blockquote>
+              We use anything available, any available dataset is good for us; if there’s a process to access it, it is open enough for us.
+            </blockquote>
+            <p>
+              This has previously included Hospital Episodes Statistics dataset, although access to it has become more strict in recent years.
+            </p>
+            <p>
+              Judy lists a "Top 4" of their most used datasets:
+              <ul>
+                <li>
+                  Prescribing data for CCGs
+                </li>
+                <li>
+                  Hospital mortality
+                </li>
+                <li>
+                  Adult social care data
+                </li>
+                <li>
+                  Estates Returns Information Collection (ERIC) from HSCIC for fire alarm data
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              SSentif’s sell a dashboard of data analytics and visualizations to several authorities and agencies in the country. The data is grouped by areas of competence, and each dataset is used to create an indicator and a relevant visualization.
+            </p>
+            <p>
+              Their product is used for benchmarking and bringing data together: health, social care, planning, employment, education, transport. Indicators about a wealth of factors are available and visualizations are ready too. SSentif offers ready-made dashboards, plus the ability to build personal and custom ones.            </p>
+            <p>
+              Ssentif clean the data (missing, quality issues, etc). If problems are identified in the data, they get back to the publisher and ask for corrections or clarifications. A relationship has been built over the years, so they generally avoid using FOI.
+            </p>
+            <p>
+              Judy reports an increase in the willingness to use data to take action by authorities and NHS Trusts, compared with the situation 7 or 8 years ago.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              There are several feedback issues with some of the authorities. Judy reports good management of requests from HSCIC, but attributes prompt replies to her years of engaging with the institution rather than a general breakthrough in engagement levels.
+            </p>
+            <p>
+              There isn’t enough community health data, which is requested a lot by their customers; on the other hand, there are many sources of mental health data, but often in formats that is difficult to use, lacking standardised publication formats, and often published across many files. Sometimes this is caused by the frequent changes in the mental health realm, causing structural changes to the data that make it difficult to use the data longitudinally.
+            </p>
+            <p>
+              Judy uses the adjective “painful” when she talks about organisation-level data. She would like to see some standard mechanism to receive information about what is new in terms of organizations. For example to be alerted when hospitals merge, with guidance on how to interpret historical data. Metadata is generally ok, although dataset descriptions can always be improved.
+            </p>
+            <p>
+              Psychological professional data is also very difficult to use, as it is at a trust level, disseminated in multiple files.
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Judy’s wish list starts with fast replies, even in absence of a named contact; she reports that NHS Digital used to be very good at this, responding to queries in 24-48 hours.
+            </p>
+            <p>
+              Another very important point is that of datasets being split in too many files: even when data is generated at a Trust level, it should be made available as a national dataset.
+            </p>
+          </section> <!-- Judy -->
+
+          <hr />
+
+          <section class="interview" id="mark-barrett">
+            <h3>
+              Mark Barrett <br/>
+              <small>Co-Founder of DataFlock </small>
+            </h3>
+            <blockquote>
+              We use Open Data to offer our customers data analysis tools
+            </blockquote>
+            <p>
+              Mark Barrett is co-founder of DataFlock. Previously of HebeWorks, he founded the then LeedsDataMill (now DataMillNorth), which received some funding from the Release of Data fund. Previously he reached Open Data fame thanks to his GP ratings app. Mark has been recognised as one of the top 50 Innovators in Healthcare by the Health Service Journal, selected as one of the Top 50 “New Radicals” by Nesta / The Guardian, and created one of the Sunday Times top 500 apps in the world, reaching #1 in the iTunes chart.
+            </p>
+            <p>
+              DataFlock is a data science consultancy, using Open Data to build tools and reports for a variety of customers. At the moment they are working with CCGs. DataFlock’s approach is, in Mark’s words, to “seek any data set available out there”, rather than advocating for any specific data release. They use the NHS Data Catalogue, Data.Gov.Uk, NHS Digital/HSCIC, and the Indicator Portal which Mark helped develop when he worked for HSCIC.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              <ul>
+                <li>
+                  “NHS RightCare – Commissioning for value” packs, published by NHS England
+                </li>
+                <li>
+                  Monthly Prescription Data, published by NHS Digital
+                </li>
+                <li>
+                  Annual Quality Outcomes Framework data, published by NHS Digital
+                </li>
+                <li>
+                  The GP Patient survey published by NHS England
+                </li>
+                <li>
+                  LSOA boundary shapefiles, published by Office for National Statistics.
+                </li>
+                <li>
+                  National Census data, published by Office of National Statistics
+                </li>
+                <li>
+                  Childhood obesity data from the National Child Measurement program
+                </li>
+                <li>
+                  Adult obesity data from NHS Digital – QOF
+                </li>
+                <li>
+                  GCSE results data from Department of Education
+                </li>
+                <li>
+                  LSOA & Ward, and population estimates from ONS
+                </li>
+                <li>
+                  Takeaway restaurants ratings from Food Standards Agency
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              DataFlock were recently commissioned by Bradford Districts CCG to investigate respiratory conditions across the three CCGs in the area as part of the “Bradford NHS Open for Innovation” event by Digital Catapult, Medipex at DHEZ. They used a variety of datasets, including BNF and prescribing, census and shapefiles, to analyse Respiratory Patterns in Bradford’s CCGs.
+            </p>
+            <p>
+              Mark and his colleagues looked at the “Commissioning for value” data packs to detect the three lowest performing CCGs for each sub-topic (e.g. Asthma, COPD). They then used 6 years of monthly prescription data related to respiratory conditions, and selected practices within the Bradford CCGs to detect both seasonal trends and practices that are outliers. This was combined with GP Patient Survey data and Deprivation levels from the IMD to detect the potential for issues in the way the practices deal with respiratory diseases, and used census data about languages to design interventions intended to reduce A&E Attendance by targeted campaigns. DataFlock also run an analysis of Child Obesity Levels by exposing that only 1.8% of council wards in England are reducing childhood obesity.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Mark finds that search is badly implemented in data portals and prefers to use Google. He finds, however, that things are improving with the advent of the NHS Data Catalogue, which marks an improvement from the time when datasets where only available on the HSCIC website.
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Mark recommends moving everything under a single point of access for data coming from different agencies.
+            </p>
+            <p>
+              There seems to be a preference for CSV rather than, as Mark puts it, “exotic formats” or linked data.
+            </p>
+            <blockquote>
+              We would simply like to avoid things that waste a lot of time, for example there is no reason to release Excel files, especially with multiple sheets, and drop down items that manipulate the data and create graphs. We spend a lot of time stripping out this functionality to get to the raw data - a basic CSV file would save us a lot of time as we manipulate the data using our own methods, often for different purposes.
+            </blockquote>
+            <p>
+              In terms of support and engagement, from talking to Mark it emerged that named contacts or response unit per dataset would help, as well as offering a way for collective engagement (“a Slack channel, for example”) with all data users.
+            </p>
+            <p>
+              Mark also suggests to show more case studies on the catalogue: many data users would appreciate exposure, especially if promoted further via social media.
+            </p>
+          </section> <!-- Mark -->
+
+          <hr />
+
+          <section class="interview" id="marcus-baw">
+            <h3>
+              Marcus Baw
+              <br/>
+              <small>
+                Locum General Practitioner
+              </small>
+            </h3>
+            <blockquote>
+              I enjoy using medical data for hackdays that show the potential for innovation
+            </blockquote>
+            <p>
+              Marcus Baw is a locum GP in the North West of England, who combines his work as a medical practitioner with software projects, particularly Open Source healthcare software.. He co-founded and runs the Leigh Hackspace and offers advice and consultancy in the space between real medical need, agile, and digital. He co-founded Open Health Hub, a non-profit forum about open governance, open source, and open standards in Health IT, and is a member of the Health Informatics Group of the Royal College of General Practitioners.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              Marcus used a number of datasets both in his work as a GP and for other projects:
+              <ul>
+                <li>
+                  Obesity prevalence data
+                </li>
+                <li>
+                  Growth percentile data from the US CDC
+                </li>
+                <li>
+                  UK90 LMS Tables
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              Marcus worked with Obesity prevalence data at a Young Rewired State youth hackday event, creating an API to show how centralised and effective management of such data could help GPs. This involved using his previously-licenced UK90 LMS Tables, which are not Open Data. Marcus also wrote a simple website that would calculate centiles.
+            </p>
+            <p>
+              He also uses data in his work as a GP, in a drive to be objective about patients. This is something Marcus stressed during our conversation:
+            </p>
+            <blockquote>
+              In order to discuss a child's obesity with their parents​, ​I would prefer to have an objective measure of the degree of obesity; I don’t want to risk making a subjective judgement based on the child's appearance. Currently, the gold standard was until recently a (paper) card with a chart, which GPs use to calculate the centile. Most NHS Trusts, and all GPs, have now abandoned the cards (due to cost) and use the freely downloadable PDF versions. Unfortunately these do not integrate at all with digital clinical record systems.
+            </blockquote>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Marcus​ complains a lot about formats:
+            </p>
+            <blockquote>
+              For example, the obesity data is there, but it's in Excel format, and full of medical jargon without relevance to the patient, which defeats the idea of Open Data; it's a dump of data that it's not easily navigable, for example wards are in the dataset multiple times for different centiles and this can be confusing without a proper description of the data
+            </blockquote>
+            <p>
+              Most datasets require knowledge of medicine, statistical or geographical jargon, and technological competence​. Marcus believes these skill sets are only rarely seen in combination, so there should be more effective guidance together with each dataset. This is especially important whenever data is recorded multiple times in the same sheet (for example for multiple wards or age groups), meaning someone who had not noticed this would potentially double or triple-count​.
+            </p>
+            <p>
+              Issues were reported also around access to data that could be open. For example the UK90 LMS tables are owned by the MRC, which regulates access to it; it is in effect a closed dataset, copyrighted and licensed for free under a non-commercial use agreement. Marcus reports it took him 9 months from applying to receiving a licence agreement and the data:
+            </p>
+            <blockquote>
+              The MRC didn’t charge me for the dataset, but the length of time it took was simply unacceptable.
+            </blockquote>
+            <p>
+              While discussing with Marcus, a very interesting point emerged: the dataset contains public data for public good, so it should be released because the public benefits from it. This is what happens in the US through the CDC, and data should be accompanied by information on how to calculate the centiles.
+            </p>
+            <blockquote>
+              We are in a so-called obesity epidemic, so why is this dataset not open?. No GP System can calculate centiles. It’s like fighting a war without having the right weapons.
+            </blockquote>
+            <p>
+              Marcus suggests that using such data is vital for a GP to remain objective and avoid forming prejudice about patients.
+            </p>
+            <p>
+              Whenever QOF data is not available, Marcus suggests the importance for GPs to have some simple unlinked open datasets about prevalence of conditions from other sources. He reports this as fairly restricted at present: “There are some databases you can get access to but they aren't open”.
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Marcus calls for a wider availability of prevalence tables for other conditions. He suggests this could be achieved by collecting QOF data in a way that does not impinge on GP work and that keeps the public confidence high around privacy issues. In particular, Marcus suggests that consent management systems need to be researched.
+            </p>
+          </section> <!-- Marcus -->
+
+          <hr />
+
+          <section class="interview" id="paul-maylon">
+            <h3>
+              Paul Maylon
+              <br/>
+              <small>
+                Data Strategy Manager at Experian
+              </small>
+            </h3>
+            <blockquote>
+              We use health data in demographics models that benefit our customers’ businesses
+            </blockquote>
+            <p>
+              Paul Malyon is a Data Strategy Manager at Experian, working on B2B data quality projects. He has worked for Tesco and was a member of the Open Data User Group at Cabinet Office.
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              <ul>
+                <li>
+                  ONS NSPD Postcode Directory
+                </li>
+                <li>
+                  NHS Postcode Directory
+                </li>
+                <li>
+                  Indices of Multiple Deprivation
+                </li>
+                <li>
+                  NHS Choices GP Surgeries
+                </li>
+              </ul>
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              Experian sell data validation and quality tools, and consultancy on data products.
+            </p>
+            <p>
+              For example, they use the NHS Postcode Directory, aiming to answer questions from Clients in the NHS such as: “Do CCGs have the right information about their practices catchment areas?” They used the ONS NSPD to supply NHS bodies with the relevant CCG code for any given postcode, matched to PAF and AddressBase.
+            </p>
+            <p>
+              Experian have also used a variety of high level health outcome data over the years to answer specific questions from clients in the Health Service. However, due to the nature of many of these datasets, they are not regularly added to demographic products such as Mosaic due to the impact of decisions on individuals that could be made using this high level modelled data. “For example”, reports Paul, “if we were to use the NHS outcome data to assess the likelihood of a smoker living at a property, it would be difficult to make this accurate enough for local authority policy or public health service purposes without additional micro-level data”. For clarity, Mosaic is a demographic dataset available in a number of countries. Using a range of data sources, it helps organisations understand the probable characteristics of an address or postcode area. By matching and modelling data, Mosaic can give the propensity for a range of factors – from household income to their propensity to read a certain national newspaper.
+            <p>
+              Experian have been doing some work with the ODI to review some of the most commonly used health open datasets. They used the NHS Choices GP Surgery database. Some of the outputs were released as Open Data by Paul.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Working on the postcode directories, Paul describes the ONS as Open, while the NHS data is not as readily available for onward use. There are also several discrepancies and mismatches. This is data used to state whether a postcode falls within a specific CCG, so the consequences can be serious. There were Scottish CCGs with wrong areas associated – leading to potential confusion for patients and financial errors for the CCGs.
+            </p>
+            <p>
+              Paul reports: “This issue is now fixed, but there was no defined process to do that officially. I had to find a way, using the right contacts”. Experian use the NSPD to help NHS bodies apportion spending on a patient to the correct CCG based upon the home address of that patient. If these addresses are wrong, there are significant efficiency concerns for the health service.
+            </p>
+            <p>
+              There are too many places to find information, and multiple lists make it difficult to understand which one is canonical. Data flows that generate these datasets are unclear. “For example”, Paul asks, “which one is the primary dataset: the one produced by the ONS or the NHS version?” Paul calls for more documentation on how these flows are shaped, in a way that helps identify the master dataset or datasets, and a deeper understanding of what processes compile and update them along with some understanding of how the datasets are used downstream.
+            </p>
+            <p>
+              Working on the NHS Choices database project Paul reports he found several issues with the files.
+            </p>
+            <blockquote>
+              We found many, many errors in the file. It’s unclear who does the cleaning up and whether anyone in the NHS is monitoring these datasets. Or maybe the generation is crowd-sourced or delegated to the single surgeries. There isn’t, either, any mention of standards being used to populate the datasets, which makes it difficult to assess their quality and whether they can be trusted by value-add users like Experian or individual patients.
+            </blockquote>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              In terms of business model, Paul suggests that moving to a fully share-alike licence would be problematic for companies like Experian that have a business model based on providing access to curated versions of the data, while the OGL is ok in that respect. However, while the OGL is clearly good for anything relating to administrative information like locations, there is an understanding that different licences might be needed for different categories of data, especially for the ones with important ethical implications. OGL licensed data is used by many different teams in Experian and the License is now seen as a mark of ‘quality’ for Open Data (even if the quality of the actual data is questionable).. This means that new OGL datasets can be used by Experian more quickly than other openly licensed data with the associated benefits passed on to businesses, individuals and the health service in a similarly rapid fashion. However, a word of warning must be issued where the OGL is supplemented with other commercial terms from the likes of the Ordnance Survey – this can create significant delay and cost; sometimes making the data commercially unviable.
+            </p>
+            <p>
+              Paul has services available on top of his data wishlist: “From a patient’s perspective, the big question would be ‘what services are available where and on what date?’ This makes an obvious route to follow to produce this dataset, adopt a standard to populate it, and name a custodian.”
+            </p>
+          </section> <!-- Paul -->
+
+          <hr />
+
+          <section class="interview" id="tom-smith">
+            <h3>
+              Tom Smith
+              <br/>
+              <small>
+                Managing Director at Oxford Consultants for Social Inclusion (OCSI)
+              </small>
+            </h3>
+            <blockquote>
+              We provide data insight consultancy that impacts citizens’ lives
+            </blockquote>
+            <p>
+              Tom Smith is the Chief Executive of OCSI (until December 2016), and from January 2017 will be MD of the ONS Data Science Campus. He is Chair of the Environment Agency Advisory Group and was a member of the Open Data User Group at Cabinet Office. Tom led the work on the UK government’s Index of Multiple Deprivation (IMD) 2015, and has been involved with developing similar indices using government administrative data since the early 1990s.
+            </p>
+            <p>
+              OCSI work with a public and community sector clients including Central Government agencies, Local Authorities, Charities, and Housing associations. OCSI help these entities to better target their spending and evaluate impact, using models developed from data. As well as producing Open Data such as the IMD, OCSI use Open Data in their tools such as Local Insight (local.communityinsight.org).
+            </p>
+            <h4>
+              Datasets
+            </h4>
+            <p>
+              OCSI use both Open Data and data obtained via Data Sharing Agreements.
+            </p>
+            <blockquote>
+              Data held by government agencies can give huge insight into social, economic, health and environmental patterns and trends at local level. However, many of these sources cannot be published as Open Data as they are based on sensitive personal data. In work such as developing the IMD, it is important that data can be securely shared in order to produce robust measures of deprivation for areas across the country.
+            </blockquote>
+            <p>
+              As examples, some of the datasets used by OCSI are:
+            </p>
+            <ul>
+              <li>
+                Prescription data at GP Level (Open)
+              </li>
+              <li>
+                ONS Data on suicide (not Open at the level required, but the process to access data is clear)
+              </li>
+              <li>
+                Department of Work and Pensions data (not Open, accessible, but behind a more convoluted process than ONS)
+              </li>
+              <li>
+                Hospital Episode Statistics (not Open, but there is an established procedure)
+              </li>
+              <li>
+                ONS Population projections (Open)
+              </li>
+              <li>
+                Referral, Assessment and Packages of Care (RAP) data for local social care from HSCIC at Local Authority level (Open)
+              </li>
+            </ul>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              OCSI provides services to several clients based on data insight. They are well known for leading the calculation of the IMD - Indices of Multiple Deprivation, which is made of 37 indicators over 6 areas and a recognised driver for better Open Data: it allows the development of Open Data generated from individual-record data. Their Community Insight and Local Insight Open Data tools – developed in partnership with housing charity HACT  - are used by more than 100 local authorities and social housing associations. Another example is their “Planning for Care” project, using ONS population projections together with data on social care needs and services. . Working with 30 local authorities, the project was a model of need of social care that allowed local authorities to evaluate actual spending. This answered questions such as “What happens if we change eligibility criteria”, thus enabling LAs to better target their spending and evaluate impacts.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              Tom did not report specific issues.
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Tom had two major recommendations.
+            </p>
+            <p>
+              The first is that data sharing access and agreements should be based on the public benefit of the work being carried out, irrespective of the type of organisation doing the work. The ONS approved researcher scheme is a good example of this, allowing secure access to data for groups who are producing clear public benefit from their analysis.
+            </p>
+            <p>
+              The second is about the data access process: having a well understood and documented process to securely access data that is not open is hugely important. For example, the NHS Digital agreements for accessing data such as Hospital Episodes Statistics, and the MoJ Justice DataLab, both allow researchers and service providers / commissioners to safely use sensitive data in their research and decisions – while keeping the underlying sensitive data secure.
+            </p>
+          </section> <!-- Tom -->
+
+          <hr />
+
+          <section class="interview" id="tony-hirst">
+            <h3>
+              Tony Hirst
+              <br/>
+              <small>
+                Senior Lecturer at the Open University
+              </small>
+            </h3>
+            <blockquote>
+              I use Open Data for educational purposes and to investigate skills gaps in the press industry and in my local area
+            </blockquote>
+            <p>
+              Tony Hirst is a Senior Lecturer at the Open University and a well known authority in the industry and the community. He lives on the Isle of Wight. The courses Tony teaches are very popular, and they have been ported to MOOC platforms.
+            </p>
+            <h4>
+              Data Uses
+            </h4>
+            <p>
+              The OU have moved from a Database course to a data management and analysis course, so that they study the full lifecycle of data, including the legal implications, rather than the theory of relational databases.
+            </p>
+            <blockquote>
+              My courses aim to answer questions such as How do I look at this data to check if it’s insightful? How do I package/share data? How do I create a business out of tractable data problems
+            </blockquote>
+            <p>
+              Tony also tries to address several research questions. One of the most interesting is whether data can be turned into text for automatic press releases, or how do we use it to detect new signals about outliers. This is aimed mostly at news and media organizations, but he also sees a lot of potential for auto responder chatbots for Care Quality Commission reports and GP complaints.
+            </p>
+            <blockquote>
+              A data geek in one area could come up with this sort of recipe for their area which also scales as a parameterised function to other areas. If we have national datasets with local relevance, commissioners or journalists can produce reports for local use that can easily parameterised and scaled to other local areas nationally.
+            </blockquote>
+            <p>
+              Tony is not particularly worried by data correctness or accuracy, as he is more  interested in the process of analysing and getting insight of whatever quality.
+            </p>
+            <blockquote>
+              Data is there to let people ask questions, so quality is not necessarily the main consideration when looking at developing automation processes around the data.
+            </blockquote>
+            <p>
+              For example, he sees health spend data as a way to understand flows of patients and services. Data about procurement and receipts could be used to analyse symmetries and asymmetries, especially considering that spending between public bodies implicitly gives access to receipts data from other public bodies, not just spending information. He says: “I want to be able to find out whether there are correlations in geographical areas, for example, do all health authorities in my area buy services from another area, and is that area the same?” This could be useful for watchdog organisations.
+            </p>
+            <h4>
+              Issues
+            </h4>
+            <p>
+              The URL on which Datasets are published changes frequently, and this creates a lot of broken links. Tony says: “Linking to live datasets in Open University courses is a problem because of likely ‘Page not found’ errors.”
+            </p>
+            <h4>
+              Recommendations
+            </h4>
+            <p>
+              Tony is very interested in building a conversation with data publishers: “Give me some questions when you give me data, and let me answer those”. He argues that this approach could help build better engagement with users. He sees talking about the internal needs of the NHS as a good starting point for data releases, rather than using data releases to do something outside the system:
+            </p>
+            <blockquote>
+              We don’t know what the NHS needs in terms of data analysis. If we knew, we could develop applications that they find useful.
+            </blockquote>
+            <p>
+              Tony would welcome engagement with the NHS while the operations are being run, with the goal of letting data analysts offer advice on how to change operations in a more evidence-based way. He has done some research, for example, on  appointment attendance, something that could benefit patients and practitioners alike.
+            </p>
+          </section> <!-- Tony -->
+
+          <H2 id="discussion">
+            Discussion
+            <a class="pull-right" href="#discussion">
+              &para;
+            </a>
+          </h2>
+          <p>
+            This report explores the experiences and needs of users of data produced by the health sector, with a specific focus on  data published by central NHS bodies , mostly based in England. Naturally, our aim is not to be complete but to provide evidence to support the development of policies and programmes concerned with data in the health system.
+          </p>
+          <p>
+            In this section we present a summary of the findings identifying some key areas, and provide recommendations for each of these key areas. Recommendations should be understood as goals towards which NHS England should work, in collaboration with other agencies where appropriate, in order to encourage interesting and useful data uses and stimulate the growth of the health Open Data ecosystem.
+          </p>
+          <p>
+            As outlined above, we did not limit our research to datasets released under an Open licence, as we found early evidence of users caring more about data availability in whatever form, and even with limitations, than data licensing with any specific licence or set of specific licences.
+          </p>
+          <p>
+            We have identified roughly four areas of data uses
+          </p>
+          <ul>
+            <li>
+              Users who use data for research purposes, to experiment for academic or professional development reasons
+            </li>
+            <li>
+              Users who build business offers or products based on available data
+            </li>
+            <li>
+              Users who create evidence to support their line of business
+            </li>
+            <li>
+              Users who are medical professionals and use data to audit their procedures.
+            </li>
+          </ul>
+          <p>
+            These uses represent a variety of sectors and businesses. However, we found scant evidence of uses of Open Data in the health sector itself, aside from the occasional data skilled medical professional who uses data to improve their practice, which offers some food for thought.
+          </p>
+          <p>
+            Due to the diverse nature of the interviewees’ work, we have been able to identify several areas that would benefit from analysis and further development. We refer to the single interview summaries for the details and present here a summary with some general findings.
+          </p>
+          <p>
+            By far the most pressing issue we discovered was the fragmentation of data publishing locations and standards across the health sector. The baffling array of data sources, combined with the complex structure of the NHS, creating confusion and extra work for almost anyone doing research, analysis, or building products and services using NHS Data. This problem is exacerbated by the publication of multiple similar datasets, all seemingly canonical - a situation which forces any potential consumer of data to evaluate different sources, often without any good source of information about which should be considered the canonical source. It is confusing to see multiple versions of the GP surgery list: the key question we received here was “which is the canonical list?”.
+          </p>
+          <p>
+            A second result of this fragmentation is that many of our interviewees reported that they don’t know where to look for data and often use Google as their main entry point. Given that many of the interviewees should be considered expert users of data, often with a professional knowledge of the structure of the NHS we are forced to consider this a structural failure of the publishing ecosystem within the health system. A common complaint was, once again, that it is hard to identify the primary source of data. Some users still search for information on the old HSCIC website.
+          </p>
+          <p>
+            Many users reported a deep frustration with the degree to which the locations at which data is published are not reliable - datasets are deleted or moved without warning at an alarming frequency, which causes established processes both manual and technical to break causing additional burden to anyone attempting to use data as a routine activity. Specific examples highlighted were the frequent ‘reorganizations’ of the NHS England Stats work area which cause old links and navigation structures to change seemingly on a whim, and the major breakage of old links to NHS Digital data publications caused by redesigns and rebranding from HSCIC. The attitude of NHS Digital to preserving old links was described as <strong>an act of vandalism perpetrated by the state</strong> - indicating the strength of feeling on this issue.
+          </p>
+          <p>
+            An observation from many users is that there are chunks of data that is not open but widely used, albeit with a restrictive licence. Many of these users would particularly welcome a single, unified, reliable place of publication for datasets from across the health system. This would be particularly effective as a single point of access for both Open and Shared data - allowing free downloads of Open Data and encouraging the establishment of Open Processes to access data that is not Open, instead of forcing users to contact different organisations.
+          </p>
+
+          <!-- Discussion -->
+
+          <h2 id="recommendations">
+            Recommendations
+            <a class="pull-right" href="#recommendations">
+              &para;
+            </a>
+          </h2>
+          <p>
+            Following our interviews, discussions and subsequent analysis, we present two specific recommendations, as well as some general principles for data publishing with concrete examples.
+          </p>
+          <h3>
+            Recommendation 1.
+          </h3>
+          <p>
+            Establish a single authoritative online point of access for all datasets in the health sector, and proceed with a programme of reducing duplication in data publishing. This should include both direct access to Open Data, and a clear process to access Shared Data.
+          </p>
+          <h3>
+            Recommendation 2.
+          </h3>
+          <p>
+            Establish an expert and reachable data support team with a remit covering the entire health system, not limited to individual institutions. This team should be encouraged to build strong links with the wider data ecosystem and lead a health data user group.
+          </p>
+          <p>
+            Below we discuss these recommendations in more detail.
+          </p>
+          <h3 id="singlepoint">
+            A single point of access
+          </h3>
+          <p>
+            All health datasets should be discoverable from a single authoritative online source. There are currently many places where data can be found and downloaded, often with data duplicated several times across the system. We repeatedly discovered this causing significant confusion and wasted effort for data users. Appendix 1 lists more than twenty different publishing locations, using different standards, data formats, with wildly different levels of usability.
+          </p>
+          <p>
+            Many of these are not under direct control of NHS England. Addressing this situation will require collaboration across the system. Establishing a single authoritative source should be combined with a programme of responsibly reducing the duplication of publication currently seen. Teams publishing data in other places should change the location they publish datasets, and clearly mark old publication locations as no longer updated, with clear links to the new publication location.
+          </p>
+          <p>
+            To users the openness of a dataset is not the only relevant feature - they are typically interested in better understanding or explaining a particular domain within health. Shared non-open datasets should be published using the same standards, metadata and discoverability mechanisms as Open datasets. Where Open datasets have a non-open equivalent (Hospital Episode Statistics for example), publishers should provide clear links explaining how the user would be able to access the non-open version.
+          </p>
+          <h3 id="engagement">
+            Engaging data users
+          </h3>
+          <p>
+            The experience of health Open Data users is that the degree and quality of support on offer varies wildly, often as a reflection of organisational and administrative boundaries and priorities. While users frequently spoke highly of the quality of support offered by some institutions, ensuring a consistently high level of service emerged as a clear priority.
+          </p>
+          <p>
+            Accordingly, there seems to be a need to establish an expert and reachable data support team with a remit covering the entire health system, not limited by institutional or administrative boundaries.
+          </p>
+          <p>
+            Establishing such a team would present an excellent opportunity to engage with the wider data ecosystem in a proactive way rather than simply reactively responding to support queries.
+          </p>
+          <p>
+            Although not unanimously seen as positive experiences, the Open Data User Group at Cabinet Office and the Environment Agency Data Advisory Group have helped in different ways their respective organisations understand data issues and prioritise data releases. We advocate a similar form of high-level engagement, providing the selection of members is dynamic and includes only “real users” who can provide expertise and discuss user needs. These user groups might be built around themes and be dynamic. For example: a dasa user group around obesity, dementia, or cancer.
+          </p>
+          <p>
+            Such a team could also build on recent work by NHS England to showcase the value and impact of health Open Data. Programmes such as the Open Health Data Project Showcase and the Obesity Data Challenge were generally well received and users reported that such efforts help to reinforce the value of their projects by increasing awareness.
+          </p>
+          <!-- Recommendations -->
+
+          <h2 id="principles">
+            Data Publishing Principles
+          </h2>
+          <h3 id="discoverable">
+            Data should be discoverable
+          </h3>
+          <p>
+            Users reported significant usability issues with many of the locations in which health data is published.
+          </p>
+          <p>
+            Many users begin their discovery process using search engines such as Google, and report that much of the data that does exist is difficult to find via searches. Publishing information in such a way that it can be found by Google is a relatively well understood domain, however, and significant advances could be made here.
+          </p>
+          <p>
+            Publishers should <strong>refrain from placing Open Data behind login mechanisms</strong> as this prevents discovery.
+          </p>
+          <p>
+            Publishers should ensure that <strong>web pages on which data is published receive effective SEO</strong>. This process can be greatly assisted by taking advantage of data management platforms which allow a QA process that ensures basic metadata is easy to enter, machine readable, and then published in such a way that such metadata is exposed to search engines.
+          </p>
+          <p>
+            Services publishing data should ensure that there are advanced search functionality that enables users to filter the thousands of available datasets consuming appropriate metadata - for example by licence, publisher, and time of publication.
+          </p>
+          <h3 id="reuse">
+            Publishers should optimise for re-use
+          </h3>
+          <p>
+            Data users frequently reported encountering technical issues with data published which causes large amounts of duplicated and wasted effort when attempting to re-use data. It is not uncommon for projects to spend 80% of their time cleaning, combining and manipulating data and only 20% of time conducting analysis or visualisation. This chills the effective re-use of health data and reduces the value to the entire health system of publication.
+          </p>
+          <p>
+            Although we present here a summary of the most pressing needs that emerged in our research, publishers should conduct <strong>regular user research with users of data</strong> to understand the ongoing needs of these users.
+          </p>
+          <h4>
+            Data Quality
+          </h4>
+          <p>
+            Much health data is released on a monthly basis, ensuring that timely information is available to the public. However monthly releases can cause significant burden on data users if the publication process does not optimise for re-use. For instance, waiting time statistics for a single month are essentially useless without knowing the figures for previous months - there are vanishingly few real world uses for the snapshot of a single month.
+          </p>
+          <p>
+            Accordingly publishers should <strong>publish periodic and historical data as time series</strong> published at <strong>predictable and stable URLs</strong>. The Land Registry Price Paid dataset, published as a single file, as monthly updates, and as annual files would serve as an excellent best-practice example.
+          </p>
+          <p>
+            It is of the utmost importance having clarity around datasets. This includes having descriptions of what the fields in a dataset mean, what the possible values, where do those values come from. This can be achieved by <strong>publishing both documentation and metadata</strong> together with each release. Publishers should consider adopting the JSON Table Schema for CSV data to make such information available in a machine readable way that works with existing data tools.
+          </p>
+          <p>
+            Several users reported licensing problems: in some cases, the licence attached to a given dataset is not clear - the Fingertips website, for example, says that all content is under OGL, but most users report that it is confusing not to see a licence attached to each slice of downloadable data. Publishers should <strong>ensure licence information is clearly stated next to the data</strong> it pertains to. Again, this is a task where specialist data management software can significantly ease the process.
+          </p>
+          <p>
+            Widely available data should always be released with a fully open licence. There is clearly a wider discussion needed around the question “what does ‘Open’ mean in a health context”, with implications for of ethics, privacy and data operations.
+          </p>
+          <p>
+            Especially in the health sector, there might be the need to restrict the openness of a dataset licence because of a variety of issues, for example ethical doubts around the way a dataset might be used. In this report we do not take a position on this, but we register the need by members of the community to be able to express several degrees of openness. Similarly to the “Five Stars of Openness”, the Open Data Institute Certificates  and to the Creative Commons “layered” approach to licensing, it would be possible to develop a set of licences that matches different requirements.
+          </p>
+          <h3 id="trustworthy">
+            Published data should be trustworthy
+          </h3>
+          <p>
+            Users repeatedly expressed frustration and confusion around the trustworthiness of published health data. Without the ability to trust a particular data publication, the user is presented with the hard task of assessing the reliability and trustworthiness of a particular dataset before even beginning to use it.
+          </p>
+          <p>
+            Some users reported a lack of ability to contact the data publishers without having an insider’s knowledge or network of contacts. Contacting the data publisher is vital in case of errors in the datasets or values that need clarifications. It is often unclear who is behind the compilation of a dataset, whether it is a team or an individual, and what degree of responsibility can be attached to that individual or team. Improving engagement would improve the overall quality of data in the catalogue and help refine the publication processes.
+          </p>
+          <p>
+            The Office for National Statistics releases datasets frequently on their website, and each dataset has a named contact that users can get in touch with in order to send queries. A famous case, widely shared on social media, saw a national journalist engaging with the ONS named contact via Twitter and achieving an amendment to a controversial data release. Publishers should <strong>ensure that datasets have clear named contacts</strong>, or at least a team contact on each dataset, and that the process to provide feedback or obtain support for the dataset is both clear, and provided in the same location as the data.
+          </p>
+          <p>
+            <strong>Publishers should ensure that links to data do not break</strong>. It is important to create processes that ensure these datasets will be accessible in the future at the same URL - an appropriate data management framework needs to be adopted, mirroring what is happening in the academic sector. In conjunction with this, obsolete or <strong>superseded data publications should be clearly marked and link to the most recent version</strong>.
+          </p>
+          <p>
+            In addition to highlighting the lack of openly available canonical sources of key health datasets, many users we spoke with reported that they would like key NHS datasets to be managed according to the principles outlined by the Cabinet Office Register Design Authority. We anticipate that this would greatly increase the level of trust in health data infrastructure, and serve as an enabling step that would reduce the cost of building products and services that support the NHS and in conducting research and analysis.
+          </p>
+          <p>
+            Discussing health registers is beyond the scope of this report, but it would seem a highly worthwhile exercise to <strong>establish a working group that explicitly seeks to identify and publish key health data as Registers</strong> working with the Register Design Authority.
+          </p>
+          <p>
+            Candidates identified by our research included:
+          </p>
+          <ul>
+            <li>
+              The GMC Register
+            </li>
+            <li>
+              The NMC Register
+            </li>
+            <li>
+              The BCAP Register
+            </li>
+            <li>
+              Most data currently administered by the ODS at NHS Digital
+            </li>
+            <li>
+              BNF codes
+            </li>
+          </ul>
+          <!-- Data publishing principles -->
+
+          <h2 id="remarks">
+            Closing remarks
+            <a class="pull-right" href="#remarks">
+              &para;
+            </a>
+          </h2>
+          <p>
+            This report has presented a series of interviews with several professionals working with health datasets in a variety of sectors and roles. The interviewees include users who use data for research purposes, users who build business offers or products based on available data, users who create evidence to support their line of business and users who are medical professionals and use data to audit their procedures.
+          </p>
+          <p>
+            We offered in this report an analysis of the outcomes of these interviews, identifying common issues in the current data offering and suggestions on what to improve, with a specific attention to the NHS Data Catalogue.
+          </p>
+          <p>
+            We developed a set of actionable recommendations to bring these suggestions forward, and believe that the major focus needs to be on raising data capability within the health sector so that data can be used and shared effectively. This will produce better operations, the capability to audit the way services are run, and an overall improvement to patients.
+          </p>
+          <!-- Closing remarks -->
+
+          <h2 id="acknowledgements">
+            Acknowledgements
+            <a class="pull-right" href="#acknowledgements">
+              &para;
+            </a>
+          </h2>
+          <p>
+            We would like to thank the following people for kindly agreeing to being interviewed:
+          </p>
+          <ul class="list-unstyled">
+            <li>Anna Powell-Smith</li>
+            <li>Callum Tanner</li>
+            <li>Edafe Onerhime</li>
+            <li>Gavin Jamie</li>
+            <li>Jamie Whyte</li>
+            <li>Judy Aldred</li>
+            <li>Mark Barrett</li>
+            <li>Marcus Baw</li>
+            <li>Paul Malyon</li>
+            <li>Tom Smith</li>
+            <li>Tony Hirst</li>
+          </ul>
+          <p>
+            We are also grateful to Paul Downey who provided interesting thoughts and investigation directions on canonical data,
+            and to Heather Savory, Mark Braggins and Nick Halliday who kindly offered advice and useful introductions.
+          </p>
+
+
+
+      </div>
+
+      <div class="col-md-3 col-md-offset-1" id="rightCol">
+
+        <ul class="nav nav-stacked" id="sidebar">
+          <li>
+            <a href="#executive-summary">
+              Executive Summary
+            </a>
+          </li>
+          <li>
+            <a href="#introduction">
+              Introduction
+            </a>
+          </li>
+          <li>
+            <a href="#approach">
+              Approach
+            </a>
+          </li>
+          <li>
+            <a href="#interviews">
+              Interviews
+            </a>
+            <ul class="nav">
+              <li>
+                <a href="#anna-powell-smith">
+                  Anna Powell-Smith
+                </a>
+              </li>
+              <li>
+                <a href="#callum-tanner">
+                  Callum Tanner
+                </a>
+              </li>
+              <li>
+                <a href="#edafe-onerhime">
+                  Edafe Onerhime
+                </a>
+              </li>
+              <li>
+                <a href="#gavin-jamie">
+                  Gavin Jamie
+                </a>
+              </li>
+              <li>
+                <a href="#jamie-whyte">
+                  Jamie Whyte
+                </a>
+              </li>
+              <li>
+                <a href="#judy-aldred">
+                  Judy Aldred
+                </a>
+              </li>
+              <li>
+                <a href="#mark-barrett">
+                  Mark Barrett
+                </a>
+              </li>
+              <li>
+                <a href="#marcus-baw">
+                  Marcus Baw
+                </a>
+              </li>
+              <li>
+                <a href="#paul-maylon">
+                  Paul Maylon
+                </a>
+              </li>
+              <li>
+                <a href="#tom-smith">
+                  Tom Smith
+                </a>
+              </li>
+              <li>
+                <a href="#tony-hirst">
+                  Tony Hirst
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#discussion">
+              Discussion
+            </a>
+          </li>
+          <li>
+            <a href="#recommendations">
+              Recommendations
+            </a>
+            <ul class="nav">
+              <li>
+                <a href="#singlepoint">
+                  A single point of access
+                </a>
+              </li>
+              <li>
+                <a href="#engagement">
+                  Engaging data users
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#principles">
+              Data Publishing Principles
+            </a>
+            <ul class="nav">
+              <li>
+                <a href="#discoverable">
+                  Discoverability
+                </a>
+              </li>
+              <li>
+                <a href="#reuse">
+                  Reusability
+                </a>
+              </li>
+              <li>
+                <a href="#trustworthy">
+                  Trustworthiness
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#remarks">
+              Closing remarks
+            </a>
+          </li>
+          <li>
+            <a href="#acknowledgements">
+              Acknowledgements
+            </a>
+          </li>
+        </ul>
+
+
+      </div>
+
+
+    </div> <!-- row -->
+  </div>   <!-- container -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script>
+    $('#sidebar').affix({
+    offset: {
+    top: 245
+    }
+    });
+
+    var $body   = $(document.body);
+    var navHeight = $('.navbar').outerHeight(true) + 20;
+
+    $body.scrollspy({
+    target: '#rightCol',
+    offset: navHeight
+    });
+
+    var shiftWindow = function() { scrollBy(0, -80) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+  </script>
+</body>
+</html>
